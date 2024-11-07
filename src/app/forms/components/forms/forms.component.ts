@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { RateOptions } from '../rate/rate.component';
 
@@ -34,7 +34,8 @@ export class FormsComponent implements OnInit {
     password: '',
   }
 
-  constructor(private _fb: FormBuilder) { }
+  // constructor(private fb: FormBuilder) { }
+  private fb = inject(FormBuilder);
 
   public get skills(): FormArray {
     return this.fbForm.get('skills') as FormArray
@@ -54,12 +55,12 @@ export class FormsComponent implements OnInit {
     conformPassword
   );
 
-  public fbForm = this._fb.group({
+  public fbForm = this.fb.group({
     name: ['Vasya'],
-    skills: this._fb.array([]),
+    skills: this.fb.array([]),
   })
 
-  public customForm = this._fb.group({
+  public customForm = this.fb.group({
     rate: [4, [Validators.required]]
   })
 
@@ -82,7 +83,7 @@ export class FormsComponent implements OnInit {
   }
 
   public newSkill(): FormGroup {
-    return this._fb.group({
+    return this.fb.group({
       skill: '',
       expirience: '',
     })
