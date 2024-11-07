@@ -15,6 +15,6 @@ export class PostService {
   constructor(private _httpClient: HttpClient) { }
 
   public getPosts(): Observable<Post[]> {
-    return this._httpClient.get<Post[]>('https://jsonplaceholder.typicode.com/posts');
+    return this._httpClient.get<Post[]>('api/posts');
   }
 }
