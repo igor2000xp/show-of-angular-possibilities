@@ -1,7 +1,7 @@
 <button (click)="canLeave = !canLeave">leave</button>
 
 <div class="calculator">
-  <h2 class="calculator__title">Калькулятор</h2>
+  <h2 class="calculator__title">Calculator</h2>
 
   <ng-container *ngFor="let group of calcGroups; let i = index">
     <div class="calculator__container">
@@ -60,20 +60,20 @@
   </ng-container>
 
   <span class="calculator__result"
-    >Результат: <span>{{ result ? result : "Нажмите расчитать!" }}</span></span
+    >Results: <span>{{ result ? result : "Press to calculate" }}</span></span
   >
 
   <div class="calculator__history">
-    <span class="calculator__history-title">История операций:</span>
+    <span class="calculator__history-title">History of the operation:</span>
     <span *ngFor="let obj of history; let i = index"
       >{{ i + 1 }}. {{ obj }}</span
     >
   </div>
 
   <div>
-    <button class="calculator__btn" (click)="calcGroup()">Рассчитать</button>
+    <button class="calculator__btn" (click)="calcGroup()">Calculate</button>
     <button class="calculator__btn" (click)="addGroup()">
-      Добавить группу
+      Add group
     </button>
   </div>
 </div>

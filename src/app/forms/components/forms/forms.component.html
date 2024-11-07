@@ -4,21 +4,21 @@
     <label for="login">Login</label>
     <input type="text" id="login" formControlName="login" />
     @if (!myForm.controls.login.valid && myForm.controls.login.touched) {
-    <small style="color: red">Это поле обязательно для заполнения</small>
+    <small style="color: red">This field is required</small>
     }
   </div>
   <div>
     <label for="email">Email</label>
     <input type="email" id="email" formControlName="email" />
     @if (!myForm.controls.email.valid && myForm.controls.email.touched) {
-    <small style="color: red">Это поле обязательно для заполнения</small>
+    <small style="color: red">This field is required</small>
     }
   </div>
   <div>
     <label for="password">Password</label>
     <input type="password" id="password" formControlName="password" />
     @if (!myForm.controls.password.valid && myForm.controls.password.touched) {
-    <small style="color: red">Это поле обязательно для заполнения</small>
+    <small style="color: red">This field is required</small>
     }
   </div>
   <button (click)="handleValue()" [disabled]="!myForm.valid">Send value</button>
@@ -31,20 +31,20 @@
     <input type="text" id="mail" formControlName="mail" />
     @if (!validatorsForm.controls.mail.valid &&
     validatorsForm.controls.mail.touched) {
-    <small style="color: red">Неправильно введены данные</small>
+    <small style="color: red">Your data is incorrect</small>
     }
   </div>
   <div>
-    <label for="password_one">Введите пароль</label>
+    <label for="password_one">Enter your password</label>
     <input type="password" id="password_one" formControlName="password_one" />
   </div>
   <div>
-    <label for="password_two">Введите пароль ещё раз</label>
+    <label for="password_two">Please enter your password again</label>
     <input type="password" id="password_two" formControlName="password_two" />
   </div>
   @if (validatorsForm.errors?.['PasswordDoNotMatch']) {
   <div>
-    <span style="color: red">Пароли не совпадают</span>
+    <span style="color: red">Passes do not match</span>
   </div>
   }
 </div>

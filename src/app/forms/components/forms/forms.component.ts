@@ -66,7 +66,7 @@ export class FormsComponent implements OnInit {
 
   public ratesOptions: RateOptions = {
     rates: 10,
-    text: 'Оцените наш курс по Angular',
+    text: 'Give your rating',
   }
 
 
@@ -78,7 +78,7 @@ export class FormsComponent implements OnInit {
     if (this.myForm.valid) {
       console.log(this.myForm.value)
     } else {
-      alert('Форма не валидна')
+      alert('Form is invalid')
     }
   }
 
