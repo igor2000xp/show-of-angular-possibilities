@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
 
+## Links
+
+[StackBlitz](https://stackblitz.com/~/github.com/igor2000xp/show-of-angular-possibilities?view=editor)
+
+[GitHub](https://github.com/igor2000xp/show-of-angular-possibilities)
+
+[Notion](https://www.notion.so/Materials-for-recommendation-for-students-1376bddbc49180f593e9da51e62a179f)
+
+/Volumes/MacUss/Users/__louvre/mentoring-Poland/My-study-projects/StackBlitz/show-of-angular-possibilities/show-of-angular-possibilities
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
